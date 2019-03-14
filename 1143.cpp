@@ -81,6 +81,7 @@ int main(void)
         //prtVec(vPath);
         int uLast = *uPath.rbegin();
         int vLast = *vPath.rbegin();
+
         if (uLast != u && vLast != v)
         {
             cout << "ERROR: " << u << " and " << v << " are not found." << endl;
@@ -96,7 +97,7 @@ int main(void)
         else
         {
             int k;
-            for (k = 0; i < uPath.size() && k < vPath.size(); ++k)
+            for (k = 0; k < uPath.size() && k < vPath.size(); ++k)
             {
                 if (uPath[k] != vPath[k])
                 {
@@ -113,7 +114,7 @@ int main(void)
             }
             else
             {
-            cout << "LCA of " << u << " and " << v << " is " << uPath[k - 1] << '.' << endl;
+                cout << "LCA of " << u << " and " << v << " is " << uPath[k - 1] << '.' << endl;
             }
         }
     }
